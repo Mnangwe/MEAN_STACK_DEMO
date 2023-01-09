@@ -21,3 +21,28 @@ span.comment, .download-node {
     display: block;
     color: gray;
 }
+
+.var {
+    color: rgb(10, 77, 87);
+}
+.variable {
+    color: rgb(36, 196, 36);
+}
+.braces {
+    color: rgb(141, 141, 46);
+}
+.braces-1 {
+    color: purple;
+}
+.braces {
+    color: blue;
+}
+.lib {
+    color: rgb(246, 143, 8);
+}
+.param {
+    color: orange;
+}
+.arrow {
+    color: blue;
+}
