@@ -58,7 +58,7 @@ exports.update = (req, res) => {
             if(!data){
                 return res.status(404).send({ message: "We could not find the user with id="+id })
             }
-            res.status(200).send({ message: "Your profile is successfully updated!" })
+            res.status(200).send({ message: "Your profile is successfully updated!!!" })
         })
         .catch(err => {
             res.status(500).send({ message: err.message })
