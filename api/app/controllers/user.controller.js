@@ -58,14 +58,14 @@ exports.update = (req, res) => {
             if(!data){
                 return res.status(404).send({ message: "We could not find the user with id="+id })
             }
-            res.status(200).send(data)
+            res.status(200).send({ message: "Your profile is successfully updated!" })
         })
         .catch(err => {
             res.status(500).send({ message: err.message })
         })
 }
 
-exports.delete = (res, res) => {
+exports.delete = (res, req) => {
     const id = req.params.id
 
     User.findByIdAndRemove(id)
