@@ -65,13 +65,18 @@ exports.update = (req, res) => {
         })
 }
 
-exports.delete = (res, req) => {
-    const id = req.params.id
+exports.delete = (req, res) => {
 
+    const id = req.params.id
+    
     User.findByIdAndRemove(id)
         .then(data => {
             if(!data){
-
+                res.status(404).send({ messege: `The user with id=${id} was not found. Maybe it does not exist!`})
             }
+            res.status(200).send({ message: "The user was successfully removed!!!"})
+        })
+        .catch(err => {
+            res.status(500).send({ message: err.message })
         })
 }
