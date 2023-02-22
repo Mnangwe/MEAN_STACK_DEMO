@@ -12,7 +12,7 @@ export class CandidatesListComponent implements OnInit {
   users: User[] = []
   currentUser?: User
   currentIndex = -1
-  message = ''
+  name = ''
   constructor( private userService: UserService ) { }
 
   ngOnInit(): void {
@@ -27,7 +27,7 @@ export class CandidatesListComponent implements OnInit {
         console.log(this.users)
       },
       error: err => {
-        this.message = err.message
+        console.error(err.message)
       }
     })
   }
@@ -41,6 +41,20 @@ export class CandidatesListComponent implements OnInit {
   selectedUser(user: User, index: number): void {
     this.currentUser = user
     this.currentIndex = index
+  }
+
+  searchByName(): void {
+    this.currentUser = {};
+    this.currentIndex = -1;
+
+    this.userService.findByName(this.name)
+      .subscribe({
+        next: (data) => {
+          this.users = data;
+          console.log(data);
+        },
+        error: (e) => console.error(e)
+      });
   }
 
 }

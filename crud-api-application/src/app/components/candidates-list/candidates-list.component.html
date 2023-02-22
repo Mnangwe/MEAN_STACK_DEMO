@@ -1,5 +1,24 @@
-<main class="list-users container">
-    <article>
+<main class="list-users container row">
+    <div class="col-md-8">
+        <div class="inpu-group mb-3">
+            <input 
+                type="text"
+                class="form-control"
+                placeholder="Search by name"
+                [(ngModel)]="name"
+            >
+            <div class="input-group-append">
+                <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    (click)="searchByName()"
+                >
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+    <article class="col-md-6">
         <div class="content">
             <div class="wrapper">
                 <ul class="list-group">
@@ -15,7 +34,7 @@
             </div>
         </div>
     </article>
-    <aside class="selected">
+    <aside class="selected col-md-6">
         <app-candidate-details
             [viewMode]="true"
             [currentUser]="currentUser"

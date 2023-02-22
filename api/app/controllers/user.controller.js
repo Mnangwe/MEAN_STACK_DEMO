@@ -21,7 +21,10 @@ exports.create = (req, res) => {
 
 exports.findAll = (req, res) => {
     
-    User.find()
+    const name = req.query.name
+    let condition = name ? { name: { $regex: new RegExp(name), $options: "i" } }  : { }
+    
+    User.find(condition)
         .then(data => {
             res.status(200).send(data)
         })
