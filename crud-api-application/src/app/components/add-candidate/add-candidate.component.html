@@ -1,0 +1,19 @@
+<main class="add-user">
+    <article class="content">
+        <div class="form-submitted" *ngIf="!submitted">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="user.name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" class="form-control" id="lname" [(ngModel)]="user.surname" name="lname">
+            </div>
+            <button class="btn btn-success" (click)="saveUser()">Submit</button>
+        </div>
+        <div *ngSubmitted>
+            <h4>Details of a new user were submitted successfully!</h4>
+            <button class="btn btn-success" (click)="newUser">Add</button>
+        </div>
+    </article>
+</main>

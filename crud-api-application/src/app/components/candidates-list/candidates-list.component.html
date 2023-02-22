@@ -1,1 +1,25 @@
-<p>candidates-list works!</p>
+<main class="list-users container">
+    <article>
+        <div class="content">
+            <div class="wrapper">
+                <ul class="list-group">
+                    <li 
+                        class="list-group-item"
+                        *ngFor="let user of users; let i = index"
+                        [class.selected]="i == currentIndex"
+                        (click)="selectedUser(user, i)"
+                    >
+                        {{ user.name }} {{ user.surname }} 
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <aside class="selected">
+        <app-candidate-details
+            [viewMode]="true"
+            [currentUser]="currentUser"
+        >   
+        </app-candidate-details>
+    </aside>
+</main>

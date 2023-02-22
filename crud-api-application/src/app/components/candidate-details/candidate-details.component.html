@@ -1,0 +1,24 @@
+<main class="candidate-details container">
+    <article class="content">
+        <div *ngIf="viewMode">
+            <div *ngIf="currentUser">
+                <h4>Candidate:</h4>
+                <div>
+                    <label for=""><strong>Name</strong>:</label>
+                    {{ currentUser.name }} {{ currentUser.surname }}
+                </div>
+                <div>
+                    <label for=""><strong>About</strong>:</label>
+                    {{ currentUser.about }}
+                </div>
+                <a class="badge badge-warning" routerLink="/candidate/{{currentUser.id}}">Edit</a>
+            </div>
+            <div *ngIf="!currentUser">
+                <br>
+                <p>Please click on a candidate...</p>
+            </div>
+        </div>
+        
+    </article>
+
+</main>
