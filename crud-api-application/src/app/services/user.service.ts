@@ -34,7 +34,7 @@ export class UserService {
   // DELETE ONE USER
   delete(id: any): Observable<any> {
 
-    return this.http.delete(this.baseUrl)
+    return this.http.delete(this.baseUrl + id)
   }
 
   // SEARCH A USER BY NAME
