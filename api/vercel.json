@@ -1,14 +1,15 @@
 {
     "version": 2,
+    "name": "profiling",
     "builds": [
         {
-            "src": "./server.js",
+            "src": "server.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "src": "./(.*)",
+            "src": "/(.*)",
             "dest": "/"
         }
     ]
