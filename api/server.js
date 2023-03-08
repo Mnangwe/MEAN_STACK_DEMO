@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors')
-
+const logger = require('./app/config/app.logging')
 const app = express();
 
 // let corsOptions = {
@@ -22,9 +22,9 @@ db.mongoose.connect(db.url, {
         useNewUrlParser: true,
         useUnifiedTopology:true
     }).then(() => {
-        console.log("Connected to mongo-db database")
+        logger.info("Connected to mongo-db database")
     }).catch(err => {
-        console.log("Cannot connect to the database", err)
+        logger.error("Cannot connect to the database", err)
         process.exit();
     })
 
@@ -36,5 +36,5 @@ app.get('/', (req, res, next) => {
 require("./app/routes/user.routes")(app)
 
 app.listen(app.get('port'), () => {
-    console.info(`Server listen on port ${app.get('port')}`);
+    logger.info(`Server listen on port ${app.get('port')}`);
 })
