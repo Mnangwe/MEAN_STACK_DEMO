@@ -1,14 +1,14 @@
-# CrudApiApplication
+# Angular 12+ CRUD Web API Using HttpClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm install` to install all your dependencies and `node_modules` for this application to work.
 
-## Code scaffolding
+Run `ng serve --port 8081` for a dev server. Navigate to `http://localhost:8081/`. The application will automatically reload if you change any of the source files.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# TODO
 
 ## Build
 
