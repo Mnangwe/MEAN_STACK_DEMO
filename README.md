@@ -1,11 +1,9 @@
 ## WEB DEVELOPMENT - ANGULAR **`12+`** NODE JS PROJECT: CRUD OPERATION EXAMPLE
-___
 
 Basic approach in web development using [**MEAN Stack**](https://dev.to/thamaraiselvam/mean-stack-cheat-sheet-5a1n) 
 The project is a basic fullstack web development to demostrate how these technologies come together and form one thing.
 
 ### Technologies
-___
 
 * [Angular+12](https://angular.io/guide/setup-local)
 * [NodeJS](https://nodejs.org/en/download/) - use this link to download in your local machine
@@ -13,18 +11,15 @@ ___
 * MongoDB - using [mongoose](https://mongoosejs.com/) library with express to connect with MongoDB database
 
 ### Projects
-___
 
 There two sides of this project. The Backend (API + link to MongoDB) and Frontend (Angular).
 Building a RESTful API using Node.js + Express with CRUD operations, the frontend uses HttpClientModule to utilise the API.
 
 ### Tutorial link to a worked example: ***W.I.P***
-___
 
 * Tutorial Linkt: [MEAN-stack demo](https://mean-guide.vercel.app/)
 
 ### Instruction To Run The Project
-___
 
 #### Node Server
 ```
