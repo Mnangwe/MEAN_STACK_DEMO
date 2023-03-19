@@ -1,4 +1,5 @@
 ## WEB DEVELOPMENT - ANGULAR **`12+`** NODE JS PROJECT: CRUD OPERATION EXAMPLE
+___
 
 Basic approach in web development using [**MEAN Stack**](https://dev.to/thamaraiselvam/mean-stack-cheat-sheet-5a1n) 
 The project is a basic fullstack web development to demostrate how these technologies come together and form one thing.
@@ -21,9 +22,8 @@ Building a RESTful API using Node.js + Express with CRUD operations, the fronten
 
 #### Node Server
 ```
-$ cd api/
+$ cd api
 $ node server.js
-
 ```
 
 #### Client Side
