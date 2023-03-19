@@ -7,7 +7,7 @@ install: express, cors, mongoose, dotenv
 .env - This file will keep your mongodb uri
 * local-connection - `mongodb://locolahost:27017/<YourDatabaseName>`
 * atlast-connection - `mongodb+srv://<username>:<password>@cluster0.wsu7v.mongodb.net/<YourDatabaseName>?retryWrites=true&w=majority`
-***You need to register on [atlas](https://www.mongodb.com/atlas/database) for you to have an online mongodb connection***.
+_You need to register on [atlas](https://www.mongodb.com/atlas/database) for you to have an online mongodb connection_.
 
 ## Project Setup
 
